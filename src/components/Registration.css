@@ -1,0 +1,150 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.registration-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+}
+
+.reg-card {
+    width: 100%;
+    max-width: 750px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.registration-card h2 {
+    text-align: center;
+    color: #263b65;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4267b2;
+    box-shadow: 0 0 5px rgba(66, 103, 178, 0.2);
+}
+
+.error {
+    color: #e63946;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.success {
+    background: #e3f8e8;
+    color: #16803c;
+    text-align: center;
+    padding: 12px;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background: #3457a4;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #243f7c;
+}
+
+.reset-btn {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.reset-btn:hover {
+    background: #d1d5db;
+}
+
+@media (max-width: 600px) {
+    .registration-card {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
